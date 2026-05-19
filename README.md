@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo.png" alt="Burpalette logo" width="220"/>
+  <img src="icon.png" alt="Burpalette logo" width="220"/>
 </p>
 
 <h1 align="center">Burpalette</h1>
