@@ -1,11 +1,11 @@
 # Burpalette
 
 A Burp Suite extension that replaces the default saturated HTTP history highlight
-colors with softer pastel equivalents, making it easier to work with highlighted
-requests during long testing sessions.
+colors with softer pastel equivalents. Colors are fully customizable directly
+within Burp via the **Burpalette** tab.
 
-All highlighted row text is also forced to **black**, fixing the readability
-issues with Burp's default white-on-red and white-on-blue rows.
+All highlighted row text is forced to **black**, fixing the readability issues
+with Burp's default white-on-red and white-on-blue rows.
 
 ---
 
@@ -13,13 +13,16 @@ issues with Burp's default white-on-red and white-on-blue rows.
 
 - Replaces all 9 Burp highlight colors (Red, Orange, Yellow, Green, Cyan, Blue,
   Pink, Magenta, Gray) with hand-picked pastel equivalents
+- **Live color editor** — dedicated Burp tab with R/G/B spinners, color swatch,
+  and text preview per color
 - Forces highlighted row text to black for maximum readability
+- Apply button applies changes instantly without reloading the extension
+- Reset to Burpalette defaults or original Burp colors in one click
 - Restores original Burp colors cleanly on extension unload
-- No network requests, no dependencies beyond Jython
 
-## Color mapping
+## Default color mapping
 
-| Highlight | Original (approx.) | Burpalette color   |
+| Highlight | Original (approx.) | Burpalette default |
 |-----------|--------------------|--------------------|
 | Red       | rgb(255,100,100)   | rgb(255,153,153)   |
 | Orange    | rgb(255,200,100)   | rgb(255,200,150)   |
@@ -51,22 +54,17 @@ issues with Burp's default white-on-red and white-on-blue rows.
 3. Set **Extension type** to **Python**.
 4. Select `burpalette.py` and click **Next**.
 
-After loading, reopen the **HTTP history** tab (Proxy → HTTP history) to see
-the updated colors.
+After loading, a **Burpalette** tab appears in the Burp top bar, and HTTP
+history highlights are updated immediately.
 
-## Customizing colors
+## Usage
 
-Open `burpalette.py` and edit the `PASTEL_BG` dictionary near the top
-of the file. Each entry is an `(R, G, B)` tuple.
-
-```python
-PASTEL_BG = {
-    "RED":     (255, 153, 153),   # ← change these values
-    ...
-}
-```
-
-Reload the extension after saving for changes to take effect.
+1. Open the **Burpalette** tab in Burp.
+2. Adjust R, G, B values for any highlight color using the spinners.
+   The swatch and preview label update live as you type.
+3. Click **Apply** to apply the new colors to HTTP history.
+4. Use **Reset to Burpalette defaults** to restore the built-in pastel colors.
+5. Use **Reset to Burp defaults** to restore Burp's original saturated colors.
 
 ## Unloading
 
@@ -78,8 +76,6 @@ Burp highlight colors are automatically restored.
 ## License
 
 Released under the MIT License. See [LICENSE](LICENSE) for details.
+Terminé
 
-## Author
-
-Maximilien Laenen
-Claude
+Vous n’avez plu
